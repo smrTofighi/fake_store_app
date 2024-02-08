@@ -1,4 +1,5 @@
 import 'package:fake_store_app/core/constant/colors.dart';
+import 'package:fake_store_app/core/widgets/main/badge_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -33,8 +34,8 @@ class MainBottomBar extends StatelessWidget {
               title: const Text('Home'),
             ),
             SalomonBottomBarItem(
-              icon: const Icon(EvaIcons.grid_outline),
-              title: const Text('Menu'),
+              icon: const BadgeCart(count: 3),
+              title: const Text('Cart'),
             ),
             SalomonBottomBarItem(
               icon: const Icon(EvaIcons.heart_outline),

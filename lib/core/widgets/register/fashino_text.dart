@@ -1,7 +1,7 @@
+import 'package:fake_store_app/core/gen/fonts.gen.dart';
 import 'package:fake_store_app/core/utils/extension.dart';
 import 'package:fake_store_app/core/constant/colors.dart';
 import 'package:fake_store_app/core/constant/dimens.dart';
-import 'package:fake_store_app/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 
 class FashionText extends StatelessWidget {

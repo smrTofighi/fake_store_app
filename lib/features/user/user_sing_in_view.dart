@@ -1,12 +1,12 @@
 import 'package:delayed_widget/delayed_widget.dart';
 import 'package:fake_store_app/core/constant/dimens.dart';
-import 'package:fake_store_app/gen/assets.gen.dart';
-import 'package:fake_store_app/modules/register/widgets/bottom_nav_register.dart';
-import 'package:fake_store_app/modules/register/widgets/custom_positioned.dart';
-import 'package:fake_store_app/modules/register/widgets/fashino_text.dart';
-import 'package:fake_store_app/modules/register/widgets/register_text_field.dart';
-import 'package:fake_store_app/modules/register/widgets/route_to_register_pages_widget.dart';
-import 'package:fake_store_app/routes/name.dart';
+import 'package:fake_store_app/core/gen/assets.gen.dart';
+import 'package:fake_store_app/core/routes/name.dart';
+import 'package:fake_store_app/core/widgets/register/bottom_nav_register.dart';
+import 'package:fake_store_app/core/widgets/register/custom_positioned.dart';
+import 'package:fake_store_app/core/widgets/register/fashino_text.dart';
+import 'package:fake_store_app/core/widgets/register/register_text_field.dart';
+import 'package:fake_store_app/core/widgets/register/route_to_register_pages_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fake_store_app/core/utils/extension.dart';
 import 'package:get/get.dart';
@@ -14,8 +14,8 @@ import 'package:icons_plus/icons_plus.dart';
 import 'package:rive/rive.dart';
 
 // ignore: must_be_immutable
-class SignInPage extends StatelessWidget {
-  SignInPage({Key? key}) : super(key: key);
+class UserSignInView extends StatelessWidget {
+  UserSignInView({Key? key}) : super(key: key);
   final GlobalKey<FormState> _fromKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -76,7 +76,7 @@ class SignInPage extends StatelessWidget {
                       message: 'Do You have not an account?',
                       buttonText: 'Sign Up',
                       onPressed: () {
-                        Get.offNamed(NamePages.signUpPage);
+                        Get.offNamed(NamePages.userSignUpView);
                       },
                     ),
                     const Spacer(),
@@ -148,7 +148,7 @@ class SignInPage extends StatelessWidget {
 
               Future.delayed(
                 const Duration(seconds: 2),
-                () => Get.offNamed(NamePages.mainPage),
+                () => Get.offNamed(NamePages.mainView),
               );
             },
           );

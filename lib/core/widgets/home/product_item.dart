@@ -1,8 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fake_store_app/core/constant/colors.dart';
 import 'package:fake_store_app/core/constant/dimens.dart';
-import 'package:fake_store_app/gen/assets.gen.dart';
-import 'package:fake_store_app/modules/widgets/loading.dart';
+import 'package:fake_store_app/core/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 

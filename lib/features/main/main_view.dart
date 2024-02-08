@@ -1,13 +1,11 @@
-import 'package:fake_store_app/core/utils/extension.dart';
-import 'package:fake_store_app/core/constant/dimens.dart';
-import 'package:fake_store_app/modules/main/home/home_page.dart';
-import 'package:fake_store_app/modules/main/widgets/main_app_bar.dart';
-import 'package:fake_store_app/modules/main/widgets/main_bottom_bar.dart';
+import 'package:fake_store_app/core/widgets/main/main_app_bar.dart';
+import 'package:fake_store_app/core/widgets/main/main_bottom_bar.dart';
+import 'package:fake_store_app/features/main/home/main_home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class MainPage extends StatelessWidget {
-  MainPage({Key? key}) : super(key: key);
+class MainView extends StatelessWidget {
+  MainView({Key? key}) : super(key: key);
   final RxInt activeIndex = RxInt(0);
 
   @override
@@ -19,7 +17,7 @@ class MainPage extends StatelessWidget {
           () => IndexedStack(
             index: activeIndex.value,
             children: [
-              HomePage(),
+              MainHomeView(),
             ],
           ),
         ),
@@ -27,4 +25,5 @@ class MainPage extends StatelessWidget {
       ),
     );
   }
+
 }

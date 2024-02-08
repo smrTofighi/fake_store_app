@@ -1,7 +1,7 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:fake_store_app/core/routes/name.dart';
+import 'package:fake_store_app/core/routes/routes.dart';
 import 'package:fake_store_app/core/themes/light_theme.dart';
-import 'package:fake_store_app/routes/name.dart';
-import 'package:fake_store_app/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       getPages: routes,
       theme: lightTheme(),
       
-      initialRoute: NamePages.splashPage,
+      initialRoute: NamePages.splashView,
     );
   }
 }

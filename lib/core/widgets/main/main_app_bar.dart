@@ -1,10 +1,9 @@
 import 'package:fake_store_app/core/constant/colors.dart';
 import 'package:fake_store_app/core/constant/dimens.dart';
-import 'package:fake_store_app/gen/fonts.gen.dart';
-import 'package:fake_store_app/modules/main/widgets/cart_badge.dart';
-import 'package:fake_store_app/modules/main/widgets/icon_app_bar.dart';
+import 'package:fake_store_app/core/gen/fonts.gen.dart';
+import 'package:fake_store_app/core/widgets/main/search_icon.dart';
+import 'package:fake_store_app/core/widgets/main/menu_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
 import 'package:fake_store_app/core/utils/extension.dart';
 
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -29,22 +28,9 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
         ),
         child: Column(
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    const IconAppBar(
-                      icon: EvaIcons.menu,
-                    ),
-                    AppDimens.medium.width,
-                    const IconAppBar(
-                      icon: EvaIcons.search_outline,
-                    )
-                  ],
-                ),
-                const CartBadge()
-              ],
+              children: [MenuIcon(), SearchIcon()],
             ),
             AppDimens.medium.height,
             const WelcomeUserName()
@@ -57,8 +43,6 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => const Size.fromHeight(160);
 }
-
-
 
 class WelcomeUserName extends StatelessWidget {
   const WelcomeUserName({

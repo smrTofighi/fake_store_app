@@ -1,27 +1,27 @@
 import 'package:delayed_widget/delayed_widget.dart';
 import 'package:fake_store_app/core/constant/colors.dart';
 import 'package:fake_store_app/core/constant/dimens.dart';
-import 'package:fake_store_app/gen/assets.gen.dart';
-import 'package:fake_store_app/gen/fonts.gen.dart';
-import 'package:fake_store_app/modules/widgets/loading.dart';
-import 'package:fake_store_app/routes/name.dart';
+import 'package:fake_store_app/core/gen/assets.gen.dart';
+import 'package:fake_store_app/core/gen/fonts.gen.dart';
+import 'package:fake_store_app/core/routes/name.dart';
+import 'package:fake_store_app/core/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:fake_store_app/core/utils/extension.dart';
 import 'package:get/get.dart';
 
-class SplashPage extends StatefulWidget {
-  const SplashPage({Key? key}) : super(key: key);
+class SplashView extends StatefulWidget {
+  const SplashView({Key? key}) : super(key: key);
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
+  State<SplashView> createState() => _SplashViewState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     Future.delayed(
       const Duration(seconds: 3),
-      () => Get.offNamed(NamePages.mainPage),
+      () => Get.offNamed(NamePages.mainView),
     );
     super.initState();
   }

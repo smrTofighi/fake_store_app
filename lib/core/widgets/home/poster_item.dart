@@ -1,13 +1,14 @@
 import 'package:fake_store_app/core/constant/dimens.dart';
-import 'package:fake_store_app/data/models/poster_model.dart';
-import 'package:fake_store_app/gen/fonts.gen.dart';
+import 'package:fake_store_app/core/data/models/poster_model.dart';
+import 'package:fake_store_app/core/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 
 class PosterItem extends StatelessWidget {
   const PosterItem({
-    super.key, required this.index,
+    super.key,
+    required this.model,
   });
-  final int index;
+  final PosterModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class PosterItem extends StatelessWidget {
       width: AppDimens.sizeOfDevice(context).width * 0.65,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: posterList[index].background!,
+          colors: model.background!,
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -35,9 +36,9 @@ class PosterItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(
-                    posterList[index].title!,
+                    model.title!,
                     style: TextStyle(
-                        color: posterList[index].titleColor,
+                        color: model.titleColor,
                         fontSize: 15,
                         fontWeight: FontWeight.bold),
                   ),
@@ -46,11 +47,12 @@ class PosterItem extends StatelessWidget {
                         vertical: 3, horizontal: AppDimens.medium),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(AppDimens.radius),
-                        color: posterList[index].buttonColor),
+                        color: model.buttonColor),
                     child: Text(
-                      posterList[index].titleButton!,
+                      model.titleButton!,
                       style: TextStyle(
-                          color: posterList[index].textButtonColor,
+                          color: model.textButtonColor,
+                          fontSize: 13,
                           fontFamily: FontFamily.poppins),
                     ),
                   )
@@ -58,7 +60,7 @@ class PosterItem extends StatelessWidget {
               ),
             ),
           ),
-          Image.asset(posterList[index].image!)
+          Image.asset(model.image!)
         ],
       ),
     );

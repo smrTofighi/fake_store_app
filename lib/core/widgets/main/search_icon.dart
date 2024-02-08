@@ -2,8 +2,8 @@ import 'package:fake_store_app/core/constant/dimens.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 
-class CartBadge extends StatelessWidget {
-  const CartBadge({Key? key}) : super(key: key);
+class SearchIcon extends StatelessWidget {
+  const SearchIcon({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class CartBadge extends StatelessWidget {
         ],
       ),
       child: const Icon(
-        EvaIcons.shopping_bag_outline,
+        EvaIcons.search_outline,
         size: 26,
       ),
     );
