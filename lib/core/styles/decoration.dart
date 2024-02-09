@@ -7,6 +7,13 @@ class AppBoxDecoration {
     borderRadius: BorderRadius.circular(AppDimens.radius),
     color: Colors.grey.shade400,
   );
+  static BoxDecoration homeItemDecoration = BoxDecoration(
+    borderRadius: BorderRadius.circular(AppDimens.radius),
+    color: Colors.white,
+    boxShadow: const [
+      BoxShadow(color: Colors.black38, blurRadius: 4),
+    ],
+  );
   static BoxDecoration shimmer = BoxDecoration(
     borderRadius: BorderRadius.circular(AppDimens.radius),
     color: Colors.grey.shade500,

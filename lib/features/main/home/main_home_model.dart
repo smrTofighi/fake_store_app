@@ -13,7 +13,8 @@ class MainHomeModel {
   final List<ProductModel> _pupolarProductList = [];
   List<PosterModel> get posterList => _posterList;
   List<ProductModel> get pupolarProductList => _pupolarProductList;
-
+  final List<String> _categoryList = [];
+  List<String> get categoryList => _categoryList;
   getPupolarProductList() async {
     const String url = '${AppApi.productLimit}7';
     var response = await DioService().getMethod(url);
@@ -21,6 +22,22 @@ class MainHomeModel {
       if (response.statusCode == 200) {
         response.data.forEach((product) {
           _pupolarProductList.add(ProductModel.fromJson(product));
+        });
+      }
+    } on DioException catch (e) {
+      log(e.toString());
+    }
+  }
+
+  getCategoryList() async {
+    const String url = AppApi.getAllCategories;
+    var response = await DioService().getMethod(url);
+    try {
+      if (response.statusCode == 200) {
+        log('200');
+        response.data.forEach((category) {
+          log(category);
+          _categoryList.add(category);
         });
       }
     } on DioException catch (e) {

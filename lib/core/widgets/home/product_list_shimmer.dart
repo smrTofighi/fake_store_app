@@ -1,5 +1,5 @@
 import 'package:fake_store_app/core/constant/dimens.dart';
-import 'package:fake_store_app/core/styles/box_decoration.dart';
+import 'package:fake_store_app/core/styles/decoration.dart';
 import 'package:flutter/material.dart';
 import 'package:fake_store_app/core/utils/extension.dart';
 import 'package:shimmer/shimmer.dart';

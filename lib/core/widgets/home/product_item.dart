@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fake_store_app/core/constant/colors.dart';
 import 'package:fake_store_app/core/constant/dimens.dart';
+import 'package:fake_store_app/core/styles/decoration.dart';
 import 'package:fake_store_app/core/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -24,13 +25,7 @@ class ProductItem extends StatelessWidget {
       ),
       width: AppDimens.sizeOfDevice(context).width * 0.42,
       height: 240,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppDimens.radius),
-        color: Colors.white,
-        boxShadow: const [
-          BoxShadow(color: Colors.black38, blurRadius: 4),
-        ],
-      ),
+      decoration: AppBoxDecoration.homeItemDecoration,
       child: Column(
         children: [
           Expanded(
