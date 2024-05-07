@@ -21,7 +21,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     Future.delayed(
       const Duration(seconds: 3),
-      () => Get.offNamed(NamePages.mainView),
+      () => Get.offNamed(NamePages.userSignInView),
     );
     super.initState();
   }

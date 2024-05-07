@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LightColors {
+  static const Color bgAppBar = Colors.white;
   LightColors._();
   static const Color primary50 = Color(0xffffeff2);
   static const Color primary100 = Color(0xffffdbe1);
@@ -28,7 +29,13 @@ class TextColor {
 
 class IconColors {
   IconColors._();
-    static const Color white = Colors.white;
+  static const Color white = Colors.white;
   static const Color grey = Colors.grey;
   static const Color black = Colors.black;
+}
+
+class ShimmerColors {
+  ShimmerColors._();
+  static Color baseColor = Colors.grey.shade500;
+  static Color highlightColor = Colors.grey.shade400;
 }

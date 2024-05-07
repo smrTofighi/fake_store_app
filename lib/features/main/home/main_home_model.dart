@@ -7,22 +7,25 @@ import 'package:fake_store_app/core/data/models/product_model.dart';
 import 'package:fake_store_app/core/data/services/dio_service.dart';
 import 'package:fake_store_app/core/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MainHomeModel {
   final List<PosterModel> _posterList = [];
-  final List<ProductModel> _pupolarProductList = [];
+  final RxList<ProductModel> _pupolarProductList = RxList();
   List<PosterModel> get posterList => _posterList;
-  List<ProductModel> get pupolarProductList => _pupolarProductList;
-  final List<String> _categoryList = [];
-  List<String> get categoryList => _categoryList;
+  RxList<ProductModel> get pupolarProductList => _pupolarProductList;
+  final RxList<String> _categoryList = RxList();
+  RxList<String> get categoryList => _categoryList;
   getPupolarProductList() async {
     const String url = '${AppApi.productLimit}7';
     var response = await DioService().getMethod(url);
     try {
+      
       if (response.statusCode == 200) {
         response.data.forEach((product) {
           _pupolarProductList.add(ProductModel.fromJson(product));
         });
+        log(_pupolarProductList[0].sizes.toString());
       }
     } on DioException catch (e) {
       log(e.toString());

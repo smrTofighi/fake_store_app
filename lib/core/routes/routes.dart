@@ -1,6 +1,7 @@
 import 'package:fake_store_app/core/routes/name.dart';
 import 'package:fake_store_app/features/main/main_binding.dart';
 import 'package:fake_store_app/features/main/main_view.dart';
+import 'package:fake_store_app/features/product/product_single_view.dart';
 import 'package:fake_store_app/features/splash/splash_view.dart';
 import 'package:fake_store_app/features/user/user_sign_up_view.dart';
 import 'package:fake_store_app/features/user/user_sing_in_view.dart';
@@ -24,4 +25,9 @@ List<GetPage> routes = [
     page: () => MainView(),
     binding: MainBinding(),
   ),
+  GetPage(
+    name: NamePages.productSingleView,
+    page: () => ProductSignleView(),
+  ),
+ 
 ];

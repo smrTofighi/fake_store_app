@@ -13,12 +13,12 @@ class SearchIcon extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(AppDimens.radius),
         color: Colors.white,
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black38,
-            blurRadius: 5,
-          )
-        ],
+        // boxShadow: const [
+        //   BoxShadow(
+        //     color: Colors.black38,
+        //     blurRadius: 5,
+        //   )
+        // ],
       ),
       child: const Icon(
         EvaIcons.search_outline,

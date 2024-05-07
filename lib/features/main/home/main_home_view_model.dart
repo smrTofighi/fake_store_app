@@ -27,7 +27,7 @@ class MainHomeViewModel extends GetxController {
     model.getCategoryList();
     update();
     Future.delayed(
-      const Duration(seconds: 2),
+      const Duration(seconds: 3),
       () => isLoading(false),
     );
   }

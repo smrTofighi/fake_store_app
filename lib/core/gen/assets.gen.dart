@@ -64,6 +64,16 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [c1, c2, c3, c4, c5, c6, c7, logo];
 }
 
+class $AssetsLottieGen {
+  const $AssetsLottieGen();
+
+  /// File path: assets/lottie/cart_is_empty.json
+  String get cartIsEmpty => 'assets/lottie/cart_is_empty.json';
+
+  /// List of all assets
+  List<String> get values => [cartIsEmpty];
+}
+
 class $AssetsRiveGen {
   const $AssetsRiveGen();
 
@@ -98,6 +108,7 @@ class Assets {
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsLottieGen lottie = $AssetsLottieGen();
   static const $AssetsRiveGen rive = $AssetsRiveGen();
 }
 

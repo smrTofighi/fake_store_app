@@ -8,9 +8,11 @@ class Topic extends StatelessWidget {
     super.key,
     required this.title,
     required this.onPressed,
+    required this.showButton,
   });
   final String title;
   final Function() onPressed;
+  final bool showButton;
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +27,14 @@ class Topic extends StatelessWidget {
             style:
                 const TextStyle(fontFamily: FontFamily.poppins, fontSize: 18),
           ),
-          TextButton(
-            onPressed: onPressed,
-            child: const Text(
-              'See all',
-              style: TextStyle(color: TextColor.grey),
+          Visibility(
+            visible: showButton,
+            child: TextButton(
+              onPressed: onPressed,
+              child: const Text(
+                'See all',
+                style: TextStyle(color: TextColor.grey),
+              ),
             ),
           ),
         ],

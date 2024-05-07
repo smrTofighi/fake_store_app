@@ -28,7 +28,7 @@ class BadgeCart extends StatelessWidget {
         borderRadius: BorderRadius.circular(4),
         elevation: 0,
       ),
-      child: const Icon(EvaIcons.shopping_cart_outline),
+      child: const Icon(EvaIcons.shopping_bag_outline),
     );
   }
 }

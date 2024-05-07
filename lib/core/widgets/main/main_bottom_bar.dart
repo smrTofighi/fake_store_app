@@ -1,5 +1,6 @@
 import 'package:fake_store_app/core/constant/colors.dart';
 import 'package:fake_store_app/core/widgets/main/badge_cart.dart';
+import 'package:fake_store_app/features/main/shop/main_shop_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -34,8 +35,12 @@ class MainBottomBar extends StatelessWidget {
               title: const Text('Home'),
             ),
             SalomonBottomBarItem(
-              icon: const BadgeCart(count: 3),
+              icon: BadgeCart(count: Get.find<MainShopViewModel>().model.products.length),
               title: const Text('Cart'),
+            ),
+            SalomonBottomBarItem(
+              icon: const Icon(EvaIcons.grid_outline),
+              title: const Text('Category'),
             ),
             SalomonBottomBarItem(
               icon: const Icon(EvaIcons.heart_outline),
@@ -43,7 +48,7 @@ class MainBottomBar extends StatelessWidget {
             ),
             SalomonBottomBarItem(
               icon: const Icon(EvaIcons.person_outline),
-              title: const Text('User'),
+              title: const Text('Account'),
             ),
           ],
         ),
